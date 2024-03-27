@@ -9,6 +9,7 @@ import BookDetails from "../components/BookDetails/BookDetails";
 import ListedBooks from "../components/ListedBooks/ListedBooks";
 import ReadBooks from "../components/ReadBooks/ReadBooks";
 import WishListBooks from "../components/WishListBooks/WishListBooks";
+import PagesToRead from "../components/PagesToRead/PagesToRead";
 
 
 
@@ -40,6 +41,10 @@ import WishListBooks from "../components/WishListBooks/WishListBooks";
               element:<WishListBooks></WishListBooks>
             }
           ]
+        },
+        {
+          path:'pagesToRead',
+          element:<PagesToRead></PagesToRead>
         }
 
       ]

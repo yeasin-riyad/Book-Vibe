@@ -1,5 +1,5 @@
 
-import { Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import '../../src/index.css'
 const Home = () => {
   return (
@@ -12,24 +12,21 @@ const Home = () => {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                {/* <NavLink to='/listedBooks' role="tab" className={({isActive})=>isActive?"tab tab-active":"tab"}>Tab 1</NavLink>
-        <NavLink to='wishlistBooks' role="tab" className={({isActive})=>isActive?"tab tab-active":"tab"}>Tab 2</NavLink> */}
-        <li><a>Home</a></li>
-        <li><a>Item 2</a></li>
-        <li><a>Item 3</a></li>
-        <li><a>Item 4</a></li>
-        <li><a>Item 5</a></li>
+      <NavLink to='/' className={({isActive})=>isActive?"text-green-600":""}><li><a>Home</a></li></NavLink>
+      <NavLink to='listedBooks' className={({isActive})=>isActive?"text-green-600":""}><li><a>Listed Books</a></li></NavLink>
+      <NavLink to='pagesToRead' className={({isActive})=>isActive?"text-green-600":""}><li><a>Pages to Read</a></li></NavLink>
       </ul>
     </div>
     <a className="btn btn-ghost text-neutral-900 font-bold text-2xl">Books Vibe</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>Item 2</a></li>
-      <li><a>Item 3</a></li>
+    <NavLink to='/' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Home</a></li></NavLink>
+    <NavLink to='listedBooks' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Listed Books</a></li></NavLink>
+    <NavLink to='pagesToRead' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Pages to Read</a></li></NavLink>
+      {/* <li><a>Item 3</a></li>
       <li><a>Item 4</a></li>
-      <li><a>Item 5</a></li>
+      <li><a>Item 5</a></li> */}
     </ul>
   </div>
   <div className="navbar-end">

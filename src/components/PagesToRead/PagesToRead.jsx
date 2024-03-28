@@ -30,24 +30,24 @@ const PagesToRead = () => {
 
 
   return (
-    <div className='w-full'>
+    <div className='w-full h-full'>
 
-        <ResponsiveContainer height={400} width="100%">
+        <ResponsiveContainer height={500} width="100%">
 
         <BarChart className='my-12'
     width={900}
-    height={300}
+    height="100%"
     data={books}
     margin={{
-      top: 20,
+      top:20,
       right: 30,
       left: 20,
       bottom: 5,
     }}
   >
     <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="bookName" angle={90}/>
-    <YAxis />
+    <XAxis dataKey="bookName" angle={45} textAnchor='start' height={200}/>
+    <YAxis/>
     <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
       {books.map((entry, index) => (
         <Cell key={`cell-${index}`} fill={colors[index % 20]} />

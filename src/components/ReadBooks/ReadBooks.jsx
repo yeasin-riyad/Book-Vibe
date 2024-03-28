@@ -1,25 +1,56 @@
-import  { useEffect, useState } from 'react'
+import  { useEffect, useState,useContext } from 'react'
 import HandleReadBooks from './HandleReadBooks';
 import HandleReadBooksError from './HandleReadBooksError';
+import { UserContext } from '../ListedBooks/UserContext';
+
 
 const ReadBooks = () => {
+  const {readBookData}=useContext(UserContext)
+  console.log(readBookData)
+  
+ 
+  const [books,setBooks]=useState([])
+  const [displayBooks,setDisplayBooks]=useState([])
+
+ 
    
-    const [books,setBooks]=useState([])
+
     useEffect(()=>{
         let data=localStorage.getItem('readBooks');
         setBooks(JSON.parse(data))
+        if(readBookData.length){
+          setDisplayBooks(readBookData)
+          // console.log(displayBooks)
+        }else{
+          setDisplayBooks(JSON.parse(data))
+
+        }
+        
        
         
-    },[books])
+    },[readBookData])
     
    
   return (
-    <div className='flex flex-col gap-y-4 items-start my-5'>
+
+   <div>
+
+
+
+
+
+      <div className='flex flex-col gap-y-4 items-start my-5'>
         {
           
-            Array.isArray(books)? books.map((book,index)=><HandleReadBooks key={index} book={book}></HandleReadBooks>):<HandleReadBooksError></HandleReadBooksError>
+            Array.isArray(books)? displayBooks.map((book,index)=><HandleReadBooks key={index} book={book}></HandleReadBooks>):<HandleReadBooksError></HandleReadBooksError>
         }
     </div>
+
+
+
+
+   </div>
+   
   )
 }
 

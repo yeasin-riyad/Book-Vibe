@@ -11,6 +11,8 @@ import ReadBooks from "../components/ReadBooks/ReadBooks";
 import WishListBooks from "../components/WishListBooks/WishListBooks";
 import PagesToRead from "../components/PagesToRead/PagesToRead";
 import Error from "../components/Error/Error";
+import Academy from "../components/Academy/Academy";
+import Form from "../components/Form/Form";
 
 
 
@@ -47,9 +49,19 @@ import Error from "../components/Error/Error";
         {
           path:'pagesToRead',
           element:<PagesToRead></PagesToRead>
+        },
+        {
+          path:'Academy',
+          element:<Academy></Academy>
+        },
+        {
+          path:'form',
+          element:<Form></Form>
         }
 
       ]
+
+
     },
   ]);
 

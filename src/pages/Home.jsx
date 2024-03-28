@@ -1,5 +1,5 @@
 
-import { NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 import '../../src/index.css'
 const Home = () => {
   return (
@@ -15,15 +15,25 @@ const Home = () => {
       <NavLink to='/' className={({isActive})=>isActive?"text-green-600":""}><li><a>Home</a></li></NavLink>
       <NavLink to='listedBooks' className={({isActive})=>isActive?"text-green-600":""}><li><a>Listed Books</a></li></NavLink>
       <NavLink to='pagesToRead' className={({isActive})=>isActive?"text-green-600":""}><li><a>Pages to Read</a></li></NavLink>
+      <NavLink to='Academy' className={({isActive})=>isActive?"text-green-600":""}><li><a>Academy</a></li></NavLink>
+      <NavLink to='form' className={({isActive})=>isActive?"text-green-600":""}><li><a>Form</a></li></NavLink>
+
+
       </ul>
     </div>
-    <a className="btn btn-ghost text-neutral-900 font-bold text-2xl">Books Vibe</a>
+
+    
+    <Link to='/' className="btn btn-ghost text-neutral-900 font-bold text-2xl">Books Vibe</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <NavLink to='/' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Home</a></li></NavLink>
     <NavLink to='listedBooks' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Listed Books</a></li></NavLink>
     <NavLink to='pagesToRead' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Pages to Read</a></li></NavLink>
+    <NavLink to='Academy' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Academy</a></li></NavLink>
+    <NavLink to='form' className={({isActive})=>isActive?"text-green-600 border-green-600 border-2":""}><li><a>Form</a></li></NavLink>
+
+
       {/* <li><a>Item 3</a></li>
       <li><a>Item 4</a></li>
       <li><a>Item 5</a></li> */}

@@ -15,7 +15,7 @@ const BookDetails = () => {
     const handleRead=()=>{
       
       if(getSaveBooksId().includes(bookId.id)){
-        toast("You have already Read This Book..")
+        toast.error("You have already Read This Book..")
       }else{
         saveBooksId(bookId.id,book)
         toast("Books Added Successfully the Read List...")
@@ -28,7 +28,7 @@ const BookDetails = () => {
 
     const handleWhitelist=()=>{
       if(getSaveBooksId().includes(bookId.id)){
-        toast("You Already Read This book.......You cant add this book to the wishList Cart....")
+        toast.error("You Already Read This book.......You cant add this book to the wishList Cart....")
       }else{
 
         if(!getWhiteListId().includes(bookId.id)){
@@ -36,7 +36,7 @@ const BookDetails = () => {
           toast("Successfully added to the WishList Cart..")
           
         }else{
-          toast("You already added this item...To the WishList Cart..")
+          toast.error("You already added this item...To the WishList Cart..")
   
         }
 

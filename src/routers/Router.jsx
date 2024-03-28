@@ -13,6 +13,7 @@ import PagesToRead from "../components/PagesToRead/PagesToRead";
 import Error from "../components/Error/Error";
 import Academy from "../components/Academy/Academy";
 import Form from "../components/Form/Form";
+import HandleError from "../components/PagesToRead/HandleError";
 
 
 
@@ -48,7 +49,8 @@ import Form from "../components/Form/Form";
         },
         {
           path:'pagesToRead',
-          element:<PagesToRead></PagesToRead>
+          element:<PagesToRead></PagesToRead>,
+          errorElement:<HandleError></HandleError>
         },
         {
           path:'Academy',

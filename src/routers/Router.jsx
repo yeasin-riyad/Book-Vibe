@@ -10,6 +10,7 @@ import ListedBooks from "../components/ListedBooks/ListedBooks";
 import ReadBooks from "../components/ReadBooks/ReadBooks";
 import WishListBooks from "../components/WishListBooks/WishListBooks";
 import PagesToRead from "../components/PagesToRead/PagesToRead";
+import Error from "../components/Error/Error";
 
 
 
@@ -17,6 +18,7 @@ import PagesToRead from "../components/PagesToRead/PagesToRead";
     {
       path: "/",
       element: <Home></Home>,
+      errorElement:<Error></Error>,
       children:[
         {
             path:"/",

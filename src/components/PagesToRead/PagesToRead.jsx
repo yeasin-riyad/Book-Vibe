@@ -46,7 +46,7 @@ const PagesToRead = () => {
     }}
   >
     <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="bookName" angle={45} textAnchor='start' height={200}/>
+    <XAxis dataKey="bookName" angle={70} textAnchor='start' height={170}/>
     <YAxis/>
     <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
       {books.map((entry, index) => (

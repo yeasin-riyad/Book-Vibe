@@ -6,8 +6,7 @@ import { UserContext } from '../ListedBooks/UserContext';
 
 const ReadBooks = () => {
   const {readBookData}=useContext(UserContext)
-  console.log(readBookData)
-  
+  console.log(readBookData)  
  
   const [books,setBooks]=useState([])
   const [displayBooks,setDisplayBooks]=useState([])

@@ -45,11 +45,7 @@ const ListedBooks = () => {
     }
     
   }
-  // console.log(optionValue)
-
-
-  // console.log(readBookData)
-  // console.log(wishListData)
+  
 
   const [tabIndex,setTabIndex]=useState(0);
   return (
